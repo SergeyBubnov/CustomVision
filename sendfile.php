@@ -26,11 +26,17 @@ $array =json_decode($res,TRUE);
 print_r($array);
 echo '</pre>';
     
+    $found = FALSE;
     foreach($array['predictions'] as $choice)
     {
         if($choice['probability'] > 0.5)
-            echo "it is ".$choice['tagName']." with probability ".$choice['probability']." <br>";
+        {
+            if(!$found) echo "Найдены соответствия:<br>";
+            $found = TRUE;
+            echo "это ".$choice['tagName']." с вероятностью ".$choice['probability']." <br>";
+        }
     }
+    if(!$found) echo "Соответствий не найдено.";
  
 curl_close($ch);
 ?> 
