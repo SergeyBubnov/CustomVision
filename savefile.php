@@ -43,7 +43,7 @@ try {
         throw new RuntimeException('Invalid file format.');
     }
 
-  	$Uploaded_file_location = sprintf('upload/%s.%s', sha1_file($_FILES['test']['tmp_name']),$ext);
+  	$Uploaded_file_location = sprintf('%s.%s', sha1_file($_FILES['test']['tmp_name']),$ext);
   
     if (!move_uploaded_file($_FILES['test']['tmp_name'],'./'.$Uploaded_file_location))
     {

@@ -5,7 +5,6 @@
   <title>Проверка изображения с помощью тренированной модели CustomVision</title>
  </head>
 <body>
-изменили 
 <form enctype="multipart/form-data" action="savefile.php" method="post">
 <input type="file" name="test">
 <button type="submit">Загрузить изображение для анализа в Custom Vision</button>
