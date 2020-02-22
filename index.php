@@ -2,7 +2,7 @@
 <html>
  <head>
   <meta charset="utf-8">
-  <title>Проверка изображения с помощью тренированной модели CustomVision</title>
+  <title>Классификация изображения в CustomVision</title>
  </head>
 <body>
 <form enctype="multipart/form-data" action="savefile.php" method="post">

@@ -59,13 +59,17 @@ try {
 
 <!DOCTYPE HTML>
 <html>
+<head>
+ <meta charset="utf-8">
+ <title>Загрузка</title>
+</head>
 <body>
     <form action="sendfile.php" method="post">
         <input type="hidden" name ="filepath" value="<?php echo $Uploaded_file_location?>">
         
         <input type="text" name="url" required placeholder="вставьте url службы CustomVision" size="100"><br>
 <input type="text" name="key" required placeholder="вставьте Prediction-Key службы Custom Vision" size="100"><br>
-        <button type="submit">Отправить на тест Custom Vision</button>
+        <button type="submit">Отправить для классификации в Custom Vision</button>
     </form>
     <img src="<?php echo $Uploaded_file_location?>" width="200" height="200">
 </body>
