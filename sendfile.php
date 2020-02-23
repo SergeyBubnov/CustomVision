@@ -2,7 +2,7 @@
 <html>
 <head>
  <meta charset="utf-8">
- <title>Классификация/title>
+ <title>Классификация</title>
 </head>
 <body>
 
@@ -61,6 +61,7 @@ curl_close($ch);
     <input type="text" name="tag" required placeholder="добавить тег и дообучить модель"><br>
     <button type="submit">Отправить для дообучения модели</button>
 </form>
+Более полна информация о том как выглядят запросы к службе дообучения модели здесь: <a href="https://southcentralus.dev.cognitive.microsoft.com/docs/services/d9a10a4a5f8549599f1ecafc435119fa/operations/58d5835bc8cb231380095be3">API documentation</href>
 
 </body>
 </html>
