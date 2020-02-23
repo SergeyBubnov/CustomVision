@@ -24,7 +24,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Content-Type: application/json'
 ));
 
-curl_setopt($ch, CURLOPT_POSTFIELDS,"{'url' : '".$fullpath."'}" );
+curl_setopt($ch, CURLOPT_POSTFIELDS,"{'url' : '".$fullpath."'}" );//указываем где лежит закачанное изображение
     
 curl_setopt($ch,CURLOPT_RETURNTRANSFER,TRUE);
 
@@ -49,15 +49,15 @@ echo '</pre>';
     
 
     
-    $trainurl = "https://southcentralus.api.cognitive.microsoft.com/customvision/v1.0/Training/projects/".$array['project']."/images/image";
+    $trainurl = "https://southcentralus.api.cognitive.microsoft.com/customvision/v1.0/Training/projects/".$array['project']."/images/image";//url на метод Train и название проекта
 
 curl_close($ch);
 ?>
 <img src="<?php echo $filepath?>" width="200" height="200"><br>
 <form action="train.php" method="post">
     <input type="hidden" name ="filepath" value="<?php echo $filepath?>"><br>
-    <input type="text" name ="key" value="<?php echo $key?>"><br>
-    <input type="text" name ="trainurl" value="<?php echo $trainurl?>"><br>
+    <input type="hidden" name ="key" value="<?php echo $key?>"><br>
+    <input type="hidden" name ="trainurl" value="<?php echo $trainurl?>"><br>
     <input type="text" name="tag" required placeholder="добавить тег и дообучить модель"><br>
     <button type="submit">Отправить для дообучения модели</button>
 </form>
