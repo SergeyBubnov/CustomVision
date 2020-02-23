@@ -10,6 +10,7 @@ $finalurl = $trainurl."?tagIds=".$tag;
 
 $ch = curl_init($finalurl);
 curl_setopt($ch, CURLOPT_POST,TRUE);
+curl_setopt($ch,CURLOPT_RETURNTRANSFER,TRUE);
     
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'Training-key: '.$key,
