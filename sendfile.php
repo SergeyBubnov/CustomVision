@@ -55,13 +55,12 @@ curl_close($ch);
 ?>
 <img src="<?php echo $filepath?>" width="200" height="200"><br>
 <form action="train.php" method="post">
-    <input type="text" name ="filepath" value="<?php echo $filepath?>"><br>
+    <input type="hidden" name ="filepath" value="<?php echo $filepath?>"><br>
     <input type="text" name ="key" value="<?php echo $key?>"><br>
     <input type="text" name ="trainurl" value="<?php echo $trainurl?>"><br>
     <input type="text" name="tag" required placeholder="добавить тег и дообучить модель"><br>
     <button type="submit">Отправить для дообучения модели</button>
 </form>
 Более полная информация о том, как выглядят запросы к службе дообучения, модели здесь: <a href="https://southcentralus.dev.cognitive.microsoft.com/docs/services/d9a10a4a5f8549599f1ecafc435119fa/operations/58d5835bc8cb231380095be3">API documentation</href>
-
 </body>
 </html>
