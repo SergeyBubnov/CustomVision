@@ -17,7 +17,7 @@ $url = htmlspecialchars($_POST['url']);
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_POST,TRUE);
     
-echo "распознаем изображение...<br><img src="$filepath" width="200" height="200"><br>";
+    echo "распознаем изображение...<br><img src=".$filepath." width='200' height='200'><br>";
 
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Prediction-Key: '.$key,
