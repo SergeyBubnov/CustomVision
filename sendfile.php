@@ -17,7 +17,7 @@ $url = htmlspecialchars($_POST['url']);
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_POST,TRUE);
     
-echo "распознаем изображение...<br>";
+echo "распознаем изображение...<br><img src="$filepath" width="200" height="200"><br>";
 
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Prediction-Key: '.$key,
@@ -53,7 +53,6 @@ echo '</pre>';
 
 curl_close($ch);
 ?>
-<img src="<?php echo $filepath?>" width="200" height="200"><br>
 <form action="train.php" method="post">
     <input type="hidden" name ="filepath" value="<?php echo $filepath?>"><br>
     <input type="hidden" name ="key" value="<?php echo $key?>"><br>
